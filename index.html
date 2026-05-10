@@ -123,10 +123,24 @@
       linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%),
       linear-gradient(135deg, #d4a574 0%, #c08a5c 25%, #8a6849 50%, #c08a5c 75%, #d4a574 100%);
   }
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.45) 100%);
+    z-index: 2;
+  }
   /* Remplace .hero-bg par : background: url('assets/hero-village.jpg') center/cover no-repeat; */
   .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     text-align: center;
     color: white;
     padding: 0 24px;
@@ -327,10 +341,24 @@
       linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%),
       linear-gradient(135deg, #5a7e9c 0%, #4a6f8a 40%, #355168 100%);
   }
+  .discover-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .discover-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);
+    z-index: 2;
+  }
   /* Remplace par : background: url('assets/discover-castelas.jpg') center/cover no-repeat; */
   .discover-hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     padding: 0 24px;
   }
   .discover-hero h2 {
@@ -581,8 +609,8 @@
 
 <!-- ════════════════ HERO ════════════════ -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <!-- Pour ton image, remplace .hero-bg par : style="background: url('assets/hero-village.jpg') center/cover no-repeat;" -->
+  <img class="hero-img" src="assets/hero-village.jpg" alt="Rochefort-du-Gard">
+  <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>
       <span>Rochefort-du-Gard:</span>
@@ -598,7 +626,7 @@
     <div class="actus-grid">
       <div class="actu-item">
         <div class="actu-img">
-          <!-- <img src="assets/actu-1.jpg" alt=""> -->
+          <img src="assets/actu-1.jpg" alt="">
         </div>
         <div class="actu-body">
           <div class="actu-title">Fête des Vignerons:<br>Retour en Images</div>
@@ -607,7 +635,7 @@
       </div>
       <div class="actu-item">
         <div class="actu-img">
-          <!-- <img src="assets/actu-2.jpg" alt=""> -->
+          <img src="assets/actu-2.jpg" alt="">
         </div>
         <div class="actu-body">
           <div class="actu-title">Nouveaux Horaires de Bus</div>
@@ -616,7 +644,7 @@
       </div>
       <div class="actu-item">
         <div class="actu-img">
-          <!-- <img src="assets/actu-3.jpg" alt=""> -->
+          <img src="assets/actu-3.jpg" alt="">
         </div>
         <div class="actu-body">
           <div class="actu-title">Prochain Conseil Municipal</div>
@@ -685,8 +713,8 @@
 <!-- ════════════════ DÉCOUVRIR ════════════════ -->
 <section class="discover-section" id="decouvrir">
   <div class="discover-hero">
-    <div class="discover-hero-bg"></div>
-    <!-- Pour ton image, remplace .discover-hero-bg par : style="background: url('assets/discover-castelas.jpg') center/cover no-repeat;" -->
+    <img class="discover-hero-img" src="assets/discover-castelas.jpg" alt="">
+    <div class="discover-hero-overlay"></div>
     <div class="discover-hero-content">
       <h2>Découvrir Rochefort-du-Gard</h2>
       <p>Un voyage à travers le patrimoine et l'histoire provençale.</p>
@@ -696,7 +724,7 @@
   <div class="discover-cards">
     <div class="discover-card">
       <div class="discover-card-img">
-        <!-- <img src="assets/ruelles.jpg" alt=""> -->
+        <img src="assets/ruelles.jpg" alt="">
       </div>
       <div class="discover-card-body">
         <div class="discover-card-title">Les Ruelles du Vieux Village</div>
@@ -705,7 +733,7 @@
     </div>
     <div class="discover-card">
       <div class="discover-card-img">
-        <!-- <img src="assets/castelas.jpg" alt=""> -->
+        <img src="assets/castelas.jpg" alt="">
       </div>
       <div class="discover-card-body">
         <div class="discover-card-title">Le Castelas</div>
@@ -714,7 +742,7 @@
     </div>
     <div class="discover-card">
       <div class="discover-card-img">
-        <!-- <img src="assets/vignobles.jpg" alt=""> -->
+        <img src="assets/vignobles.jpg" alt="">
       </div>
       <div class="discover-card-body">
         <div class="discover-card-title">Vignobles et Terroir</div>
@@ -732,35 +760,35 @@
     <div class="parcours-steps">
       <div class="parcours-steps-header">Étapes du Parcours</div>
       <div class="step-item active">
-        <div class="step-thumb"><!-- <img src="assets/p-1.jpg" alt=""> --></div>
+        <div class="step-thumb"><img src="assets/p-1.jpg" alt=""></div>
         <div class="step-info">
           <div class="step-name">1. Le Castelas</div>
           <div class="step-desc">Ruines du château fortifié médiéval, dominant les vallées.</div>
         </div>
       </div>
       <div class="step-item">
-        <div class="step-thumb"><!-- <img src="assets/p-2.jpg" alt=""> --></div>
+        <div class="step-thumb"><img src="assets/p-2.jpg" alt=""></div>
         <div class="step-info">
           <div class="step-name">2. Église Saint-Bardoux</div>
           <div class="step-desc">Église du XIXe siècle, élément central du patrimoine local.</div>
         </div>
       </div>
       <div class="step-item">
-        <div class="step-thumb"><!-- <img src="assets/p-3.jpg" alt=""> --></div>
+        <div class="step-thumb"><img src="assets/p-3.jpg" alt=""></div>
         <div class="step-info">
           <div class="step-name">3. Place de la République</div>
           <div class="step-desc">Place principale du village, cœur de la vie locale.</div>
         </div>
       </div>
       <div class="step-item">
-        <div class="step-thumb"><!-- <img src="assets/p-4.jpg" alt=""> --></div>
+        <div class="step-thumb"><img src="assets/p-4.jpg" alt=""></div>
         <div class="step-info">
           <div class="step-name">4. Le Lavoir</div>
           <div class="step-desc">Ancien lavoir du XVIIIe siècle, mémoire du quotidien d'autrefois.</div>
         </div>
       </div>
       <div class="step-item">
-        <div class="step-thumb"><!-- <img src="assets/p-5.jpg" alt=""> --></div>
+        <div class="step-thumb"><img src="assets/p-5.jpg" alt=""></div>
         <div class="step-info">
           <div class="step-name">5. La Chapelle Saint-Joseph</div>
           <div class="step-desc">Chapelle paisible, témoin de la ferveur provençale.</div>
